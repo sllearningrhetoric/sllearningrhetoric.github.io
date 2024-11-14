@@ -1,0 +1,10 @@
+.quote {
+    text-align: right;
+}
+body {
+    background-image: url('https://s3.amazonaws.com/criterion-production/images/6038-57c57cb1978d91374e3d00c7225fd579/room_with_a_view_medium.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white; /* Change text color to white */
+}
