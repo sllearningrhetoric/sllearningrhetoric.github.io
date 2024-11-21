@@ -1,6 +1,6 @@
 .quote {
-    text-align: center; /* Center the text */
-        font-size: 1.5em; /* Increase the font size */
+    text-align: center; /* Center the quote text */
+    font-size: 1.5em; /* Increase the font size */
 }
 body {
     background-color: rgba(106, 175, 61, 0.707);
@@ -8,7 +8,28 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: rgb(241, 230, 79); /* Change text color to white */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center text */
+    position: relative;
 }
+
+.background-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Ensure the image is behind the text */
+}
+
+.background-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+
 a {
     color: white; /* Change hyperlink text color to white */
     text-decoration: underline; /* Keep the underline */
@@ -16,4 +37,8 @@ a {
 
 a:hover {
     color: lightgray; /* Optional: change color on hover */
+}
+
+h1 {
+    text-align: center; /* Center the h1 text */
 }
