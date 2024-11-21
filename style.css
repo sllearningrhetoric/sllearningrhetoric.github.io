@@ -1,6 +1,6 @@
 .quote {
-    text-align: left;
-    font-size: 1.5em; /* Increase the font size */
+    text-align: center; /* Center the text */
+        font-size: 1.5em; /* Increase the font size */
 }
 body {
     background-color: rgba(106, 175, 61, 0.707);
