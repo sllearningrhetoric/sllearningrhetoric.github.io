@@ -3,11 +3,11 @@
     font-size: 1.5em; /* Increase the font size */
 }
 body {
-    background-color: goldenrod;
+    background-color: rgba(106, 175, 61, 0.707);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: white; /* Change text color to white */
+    color: rgb(241, 230, 79); /* Change text color to white */
 }
 a {
     color: white; /* Change hyperlink text color to white */
