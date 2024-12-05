@@ -3,15 +3,12 @@
     font-size: 1.5em; /* Increase the font size */
 }
 body {
-    background-color: rgba(106, 175, 61, 0.707);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: rgb(47, 90, 16); /* Change text color to white */
     margin: 0;
     padding: 0;
+    color: #333; /* Default text color */
     text-align: center; /* Center text */
     position: relative;
+    background-color: #f8f9fa; /* Light grey background color */
 }
 
 .background-image-container {
@@ -41,4 +38,38 @@ a:hover {
 
 h1 {
     text-align: center; /* Center the h1 text */
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1, p {
+    text-align: center; /* Center the headings and paragraphs */
+}
+
+.btn-block {
+    margin-bottom: 20px; /* Add space between buttons */
+}
+
+.btn-lg {
+    font-size: 1.25em; /* Increase font size for button text */
+    padding: 20px; /* Increase padding for a more square-ish shape */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for a floating effect */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.btn-lg:hover {
+    transform: translateY(-5px); /* Slightly lift the button on hover */
+}
+
+.custom-btn {
+    background-color: #007bff; /* Primary blue color */
+    border: none;
+}
+
+.custom-btn-alt {
+    background-color: #6c757d; /* Secondary grey color */
+    border: none;
 }
