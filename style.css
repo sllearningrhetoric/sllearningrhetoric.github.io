@@ -35,7 +35,7 @@ h1, p {
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for a floating effect */
     transition: transform 0.2s; /* Smooth transition for hover effect */
-    width: 75%; /* Reduce the width by 25% */
+    width: 100%; /* Make the buttons full width within their columns */
 }
 
 .btn-lg:hover {
