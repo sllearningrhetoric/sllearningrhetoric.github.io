@@ -8,7 +8,7 @@ body {
     color: #333; /* Default text color */
     text-align: center; /* Center text */
     position: relative;
-    background-color: #f8f9fa; /* Light grey background color */
+    background-color: #e6e7e7; /* Light grey background color */
 }
 
 .background-image-container {
@@ -33,7 +33,7 @@ a {
 }
 
 a:hover {
-    color: lightgray; /* Optional: change color on hover */
+    color: rgb(216, 213, 213); /* Optional: change color on hover */
 }
 
 h1 {
@@ -65,11 +65,11 @@ h1, p {
 }
 
 .custom-btn {
-    background-color: #007bff; /* Primary blue color */
+    background-color: #56a2f4; /* Primary blue color */
     border: none;
 }
 
 .custom-btn-alt {
-    background-color: #6c757d; /* Secondary grey color */
+    background-color: #484e53; /* Secondary grey color */
     border: none;
 }
