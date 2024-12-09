@@ -19,6 +19,32 @@ body {
     color: white; /* White text color for contrast */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
     border-radius: 10px; /* Optional: add rounded corners */
+    animation: fadeInOut 10s infinite alternate; /* Add animation */
+    position: relative;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.welcome-section h1, .welcome-section p {
+    animation: textEnhance 10s infinite alternate; /* Add text animation */
+}
+
+@keyframes textEnhance {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1.2;
+        transform: scale(1.1);
+    }
 }
 
 h1, p {
@@ -30,31 +56,47 @@ h1, p {
     padding: 40px 15px; /* Double the height and adjust padding for a more square-ish shape */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for a floating effect */
-    transition: transform 0.2s; /* Smooth transition for hover effect */
-    width: 250px; /* Set a fixed width for the blue buttons */
+    transition: transform 0.2s, background 0.5s; /* Smooth transition for hover effect */
+    width: 100%; /* Make the buttons full width within their columns */
+    background: linear-gradient(45deg, #007bff, #00d4ff); /* Gradient background */
+    color: #ffffff; /* White text color for better contrast */
+    border: none;
 }
 
 .btn-lg:hover {
     transform: translateY(-5px); /* Slightly lift the button on hover */
+    background: linear-gradient(45deg, #00d4ff, #007bff); /* Reverse gradient on hover */
 }
 
 .custom-btn {
-    background-color: #007bff; /* Primary blue color */
+    background: linear-gradient(45deg, #007bff, #00d4ff); /* Gradient background for primary buttons */
     border: none;
     color: #ffffff; /* White text color for better contrast */
 }
 
+.custom-btn:hover {
+    background: linear-gradient(45deg, #00d4ff, #007bff); /* Reverse gradient on hover */
+}
+
 .custom-btn-alt {
-    background-color: #acdb80; /* Secondary grey color */
+    background: linear-gradient(45deg, #acdb80, #c4e89b); /* Gradient background for secondary buttons */
     border: none;
     color: #ffffff; /* White text color for better contrast */
     width: 300px; /* Set a wider fixed width for the grey buttons */
 }
 
+.custom-btn-alt:hover {
+    background: linear-gradient(45deg, #c4e89b, #acdb80); /* Reverse gradient on hover */
+}
+
 .btn-lightblue {
-    background-color: #687ae1; /* Lighter blue color */
+    background: linear-gradient(45deg, #687ae1, #8493f0); /* Gradient background for light blue buttons */
     border: none;
     color: #ffffff; /* White text color for better contrast */
+}
+
+.btn-lightblue:hover {
+    background: linear-gradient(45deg, #8493f0, #687ae1); /* Reverse gradient on hover */
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -79,13 +121,16 @@ h1, p {
                     <a class="nav-link" href="index.html">Education <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="work.html">Work and Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="skills.html">Skills</a>
+                    <a class="nav-link" href="work-and-services.html">Work and Services</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="publications.html">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="honors.html">Honors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="skills.html">Skills</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://docs.google.com/document/d/1KJg6M5l4qed2j6mqEVZKRMAnjpsdmfOOXO3fAo6pTEA/edit?tab=t.0" target="_blank">Writing Samples</a>
@@ -100,26 +145,24 @@ h1, p {
     <!-- Main Content -->
     <div class="container mt-5">
         <div class="welcome-section">
-            <h1>Welcome to My Portfolio</h1>
-            <p>This is a brief introduction about myself. Click the buttons below to learn more about my education, work and services, skills, publications, writing samples, and teaching philosophy.</p>
+            <h1>Welcome to Su Liu's Portfolio</h1>
+            <p>"Freedom has cost too much blood and agony to be relinquished at the cheap price of rhetoric." - Thomas Sowell</p>
         </div>
         <div class="row justify-content-center mt-5">
             <div class="col-md-3 mb-3">
                 <a href="education.html" class="btn btn-primary btn-lg custom-btn">Education</a>
             </div>
             <div class="col-md-3 mb-3">
-                <a href="work.html" class="btn btn-primary btn-lg custom-btn">Work and Services</a>
-            </div>
-            <div class="col-md-3 mb-3">
-                <a href="skills.html" class="btn btn-primary btn-lg custom-btn">Skills</a>
+                <a href="work-and-services.html" class="btn btn-primary btn-lg custom-btn">Work and Services</a>
             </div>
             <div class="col-md-3 mb-3">
                 <a href="publications.html" class="btn btn-primary btn-lg custom-btn">Publications</a>
             </div>
-        </div>
-        <div class="row justify-content-center mt-4">
             <div class="col-md-3 mb-3">
-                <a href="honors.html" class="btn btn-primary btn-lg custom-btn">Honors</a>
+                <a href="honors.html" class="btn btn-lightblue btn-lg custom-btn">Honors</a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <a href="skills.html" class="btn btn-lightblue btn-lg custom-btn">Skills</a>
             </div>
         </div>
         <div class="row justify-content-center mt-4">
