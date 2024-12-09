@@ -45,7 +45,7 @@ h1, p {
 }
 
 .custom-btn-alt {
-    background-color: #80db98; /* Secondary grey color */
+    background-color: #acdb80; /* Secondary grey color */
     border: none;
     color: #ffffff; /* White text color for better contrast */
     width: 300px; /* Set a wider fixed width for the grey buttons */
