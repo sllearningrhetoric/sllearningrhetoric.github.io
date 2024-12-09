@@ -7,10 +7,113 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: #333; /* Default text color */
+            text-align: center; /* Center text */
+            position: relative;
+            background-color: #f8f9fa; /* Light grey background color */
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .welcome-section {
+            background-image: url('https://xj.litour.cn/upload/tour/20240428/5336252d598d6878da555601fb9a99ef.jpg'); /* Use the provided image URL */
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            color: white; /* White text color for contrast */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+            border-radius: 10px; /* Optional: add rounded corners */
+            animation: fadeInOut 10s infinite alternate; /* Add animation */
+            position: relative;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        .welcome-section h1, .welcome-section p {
+            animation: textEnhance 10s infinite alternate; /* Add text animation */
+        }
+
+        @keyframes textEnhance {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 1.2;
+                transform: scale(1.1);
+            }
+        }
+
+        .btn-lg {
+            font-size: 1.25em; /* Increase font size for button text */
+            padding: 40px 15px; /* Double the height and adjust padding for a more square-ish shape */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for a floating effect */
+            transition: transform 0.2s, background 0.5s; /* Smooth transition for hover effect */
+            width: 100%; /* Make the buttons full width within their columns */
+            background: linear-gradient(45deg, #007bff, #00d4ff); /* Gradient background */
+            color: #ffffff; /* White text color for better contrast */
+            border: none;
+        }
+
+        .btn-lg:hover {
+            transform: translateY(-5px); /* Slightly lift the button on hover */
+            background: linear-gradient(45deg, #00d4ff, #007bff); /* Reverse gradient on hover */
+        }
+
+        .custom-btn {
+            background: linear-gradient(45deg, #007bff, #00d4ff); /* Gradient background for primary buttons */
+            border: none;
+            color: #ffffff; /* White text color for better contrast */
+        }
+
+        .custom-btn:hover {
+            background: linear-gradient(45deg, #00d4ff, #007bff); /* Reverse gradient on hover */
+        }
+
+        .custom-btn-alt {
+            background: linear-gradient(45deg, #acdb80, #c4e89b); /* Gradient background for secondary buttons */
+            border: none;
+            color: #ffffff; /* White text color for better contrast */
+            width: 300px; /* Set a wider fixed width for the grey buttons */
+        }
+
+        .custom-btn-alt:hover {
+            background: linear-gradient(45deg, #c4e89b, #acdb80); /* Reverse gradient on hover */
+        }
+
+        .btn-lightblue {
+            background: linear-gradient(45deg, #687ae1, #8493f0); /* Gradient background for light blue buttons */
+            border: none;
+            color: #ffffff; /* White text color for better contrast */
+        }
+
+        .btn-lightblue:hover {
+            background: linear-gradient(45deg, #8493f0, #687ae1); /* Reverse gradient on hover */
+        }
+
+        /* Hide navbar on scroll */
+        .navbar {
+            transition: top 0.3s;
+        }
+    </style>
 </head>
 <body>
     <!-- Bootstrap Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="#">My Portfolio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -79,5 +182,21 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript to hide navbar on scroll down and show on scroll up
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", function() {
+            let navbar = document.querySelector(".navbar");
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                // Scroll down
+                navbar.style.top = "-80px"; // Adjust this value based on your navbar height
+            } else {
+                // Scroll up
+                navbar.style.top = "0";
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
 </body>
 </html>
